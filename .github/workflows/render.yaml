@@ -32,6 +32,15 @@ jobs:
       with:
         to: pdf
         path: index.qmd
+      continue-on-error: true
+      tee: render_log.txt
+
+    - name: Upload Render Log
+      if: always()
+      uses: actions/upload-artifact@v3
+      with:
+        name: render-log
+        path: render_log.txt
 
     - name: Configure Git
       run: |
@@ -41,7 +50,7 @@ jobs:
     - name: Commit and Push Changes
       run: |
         git add index.pdf
-        git commit -m "Update index.pqf"
+        git commit -m "Update index.pdf"
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
