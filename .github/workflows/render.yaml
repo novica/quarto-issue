@@ -28,12 +28,8 @@ jobs:
         fc-cache -fv
         
     - name: Render Markdown to PDF
-      uses: quarto-dev/quarto-actions/render@v2
-      with:
-        to: pdf
-        path: index.qmd
-      continue-on-error: true
-      tee: render_log.txt
+      run: |
+        quarto render index.qmd --to pdf > render_log.txt 2>&1
 
     - name: Upload Render Log
       if: always()
