@@ -9,6 +9,6 @@ https://github.com/quarto-dev/quarto-cli/discussions/12071
 
 The workaround is to change the engine to `lualatex` in the yaml of the quarto document.
 
-See the log at https://github.com/novica/quarto-render-to-pdf-custom-font-issue/actions/runs/13291012938 for mode details.
+See the log at https://github.com/novica/quarto-render-to-pdf-custom-font-issue/actions/runs/13291012938 for more details.
 
 See similar issuses discussed here: https://duckduckgo.com/?q=xdvipdfmx%3Afatal%3A+Invalid+font%3A+-1+(0)
