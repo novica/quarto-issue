@@ -1,12 +1,6 @@
-WHen rendering with default engine fails with
-```
-  Rendering PDF
-  running xelatex - 1
-      This is XeTeX, Version 3.141592653-2.6-0.999996 (TeX Live 2024) (preloaded format=xelatex)
-         restricted \write18 enabled.
-    entering extended mode
-  
-    xdvipdfmx:fatal: Invalid font: -1 (0)
-  
-    No output PDF file writte
-```
+This is a small repository to demonstrate the issue of failing to render a PDF document using the default pdf engine in quarto when setting up a custom font.
+
+See discussion here for more details:
+https://github.com/quarto-dev/quarto-cli/discussions/12071
+
+The workaround is to change the engine to `lualatex` in the yaml of the quarto document.
