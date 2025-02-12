@@ -1,3 +1,5 @@
+###  xdvipdfmx:fatal: Invalid font: -1 (0)
+
 This is a small repository to demonstrate the issue of failing to render a PDF document using the default xelatex pdf engine in quarto when setting up a custom font.
 
 Currently this fails when trying to set up the font Ubuntu. But I tried with Times New Roman (after installing the appropirate package) and it failed too.
